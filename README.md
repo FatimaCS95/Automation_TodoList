@@ -1,6 +1,7 @@
 # Full-Stack To-Do List Automation Application
 
 This is a full-stack to-do list application that demonstrates a robust, multi-layered testing strategy. The project began as a foundational React/Node.js application, which I then enhanced by adding new features (such as task editing) and implementing a comprehensive testing suite from the ground up.
+
 The current application features user registration, JWT-based authentication, full CRUD functionality for tasks, and is validated by backend API tests (Jest/Supertest) and frontend End-to-End tests (Cypress).
 
 ## Core Technologies

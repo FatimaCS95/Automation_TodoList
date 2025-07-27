@@ -1,7 +1,10 @@
+// cypress/e2e/tasks/create.cy.js
+
 describe('Task Creation', () => {
+  
   const testUsername = `task_creator_${Date.now()}`;
   const testPassword = 'password123';
-  const category = 'Work';
+  const category = 'Work'; // This category will now exist in the DB
   const dueDate = '10/15/2025';
 
   before(() => {
@@ -20,7 +23,10 @@ describe('Task Creation', () => {
     const taskDescription = 'Finish project proposal';
     cy.get('[data-cy="task-description-input"]').type(taskDescription);
     cy.get('[aria-labelledby="task-category-label"]').click();
+    
+    // This will now find and click 'Work' successfully
     cy.get('ul[role="listbox"]').contains(category).click();
+    
     cy.get('[data-cy="task-due-date-input"]').type(dueDate);
     cy.get('[data-cy="task-submit-button"]').click();
 

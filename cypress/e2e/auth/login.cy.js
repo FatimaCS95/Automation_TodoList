@@ -1,13 +1,20 @@
 describe('Login Functionality', () => {
-  const testUsername = `testuser_${Date.now()}`;
+  let testUsername;
   const testPassword = 'password123';
 
-  before(() => {
-    cy.request('POST', '/api/user/register', { username: testUsername, password: testPassword });
+  beforeEach(() => {
+    testUsername = `testuser_${Date.now()}`;
+
+    // Register the user before each test
+    cy.request('POST', '/api/user/register', {
+      username: testUsername,
+      password: testPassword,
+    });
+
+    cy.visit('/login');
   });
 
   it('should fail with invalid credentials', () => {
-    cy.visit('/login');
     cy.get('[data-cy="login-username-input"]').type(testUsername);
     cy.get('[data-cy="login-password-input"]').type('wrongpassword');
     cy.get('[data-cy="login-submit-button"]').click();
@@ -18,7 +25,6 @@ describe('Login Functionality', () => {
   });
 
   it('should succeed with valid credentials', () => {
-    cy.visit('/login');
     cy.get('[data-cy="login-username-input"]').type(testUsername);
     cy.get('[data-cy="login-password-input"]').type(testPassword);
     cy.get('[data-cy="login-submit-button"]').click();

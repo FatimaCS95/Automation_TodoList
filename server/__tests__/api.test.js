@@ -29,10 +29,14 @@ describe('API Endpoints', () => {
 
     // --- FIX #2: SEED THE CATEGORY TABLE ---
     // This ensures that a category with ID=1 exists for our tests.
-    await pool.query(`
-      INSERT INTO "category" ("id", "name")
-      VALUES (1, 'Test Category'), (2, 'Another Category');
-    `);
+     await pool.query(`
+    INSERT INTO "category" ("id", "name")
+    VALUES 
+      (1, 'Work'), 
+      (2, 'Personal'), 
+      (3, 'Chores'),
+      (4, 'Health');
+  `);
 
     // --- FIX #3: MAKE SURE REGISTRATION/LOGIN USES THE CORRECT USER ---
     // Register our test user

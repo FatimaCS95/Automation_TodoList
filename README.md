@@ -27,7 +27,7 @@ Follow these steps to get the application and its test suites running locally.
 You only need to do this once.
 
 1.  Create a new database in PostgreSQL. You can name it whatever you like (e.g., `todo_app`).
-2.  Run the provided `database_tbles.sql` file against your new database. This will create the necessary `users`, `category`, and `task` tables.
+2.  Run the provided `database_tables.sql` file against your new database. This will create the necessary `users`, `category`, and `task` tables.
 
 ### 2. Project Installation & Configuration
 

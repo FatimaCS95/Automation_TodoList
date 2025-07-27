@@ -2,7 +2,7 @@
 
 | **Prepared By:** | Fatima Fadel | **Date:**   | 27/7/2025 |
 | :--------------- | :----------- | :---------- | :-------- |
-| **Version:**     | 1.0          | **Project:** | To-Do App |
+| **Version:**     | 1.0          | **Project:** | Automation To-Do App |
 
 ### 1. Introduction & Objectives
 This document outlines the testing strategy for a modified version of the basic-react-todo-list application. The primary objective is to verify the core business logic, security, and end-to-end user functionality of the application. The strategy employs a multi-layered approach, combining fast and stable backend API tests with user-centric frontend E2E tests to ensure comprehensive quality assurance.
